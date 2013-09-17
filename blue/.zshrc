@@ -1,4 +1,4 @@
-PROMPT="%{$fg[blue]%}%. 👾  %{$reset_color%}"
+PROMPT="%{$fg_bold[blue]%}%. 👾  %{$reset_color%}"
 PATH=/usr/local/share/npm/bin/:$PATH
 
 # Set UTF-8 for mosh
