@@ -1,11 +1,15 @@
 PROMPT="%{$fg_bold[blue]%}%. 👾  %{$reset_color%}"
-PATH=/usr/local/share/npm/bin/:$PATH
+PATH=~/bin:/usr/local/share/npm/bin/:$PATH
 
 # Set UTF-8 for mosh
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
 
 alias ll='ls -al'
+alias pg='postgres -D /usr/local/var/postgres'
+
+export TODOTXT_DEFAULT_ACTION=ls
+alias t='todo.sh'
 
 # ZSH
 autoload -U colors && colors
