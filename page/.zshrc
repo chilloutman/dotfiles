@@ -13,7 +13,8 @@ alias ll='ls -al'
 
 # Prompt
 source ~/.zsh/git-prompt.sh
-PROMPT='%{$fg_bold[blue]%}%1~%{$reset_color%}$(__git_ps1 " (%s)") ☕  '
+PROMPT='%{$fg_bold[blue]%}%d%{$reset_color%}$(__git_ps1 " (%s)")
+☕  '
 setopt promptsubst
 export GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUPSTREAM="auto"
