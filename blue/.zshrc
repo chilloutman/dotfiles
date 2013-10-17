@@ -1,5 +1,5 @@
 PROMPT="%{$fg_bold[blue]%}%. 👾  %{$reset_color%}"
-PATH=~/bin:/usr/local/share/npm/bin/:$PATH
+PATH=~/bin:/usr/local/bin:/usr/local/share/npm/bin:$PATH
 
 # Set UTF-8 for mosh
 export LC_ALL=en_US.UTF-8  
