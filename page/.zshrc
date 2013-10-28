@@ -6,14 +6,17 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH
 export JAVA_HOME=/Library/Java/Home
 
 alias ll='ls -al'
+alias java6='export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home'
 
 # --- ZSH --- #
 
-#source ~/.zsh/git-prompt/zshrc.sh
+# Delete key
+bindkey "^[[3~" delete-char
 
 # Prompt
 source ~/.zsh/git-prompt.sh
-PROMPT='%{$fg_bold[blue]%}%d%{$reset_color%}$(__git_ps1 " (%s)")
+PROMPT='
+%{$fg_bold[blue]%}%d%{$reset_color%}$(__git_ps1 " (%s)")
 ☕  '
 setopt promptsubst
 export GIT_PS1_SHOWDIRTYSTATE=1
