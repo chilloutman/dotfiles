@@ -53,3 +53,5 @@ ZSH_HIGHLIGHT_STYLES[globbing]='fg=blue,bold'
 
 # /Highlighting
 
+[[ -z "$TMUX" ]] && exec tmux
+
