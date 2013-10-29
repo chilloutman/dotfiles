@@ -7,6 +7,7 @@ export JAVA_HOME=/Library/Java/Home
 
 alias ll='ls -al'
 alias java6='export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home'
+alias tmux-kill='tmux ls | awk '\''{print $1}'\'' | sed '\''s/://g'\'' | xargs -I{} tmux kill-session -t {}'
 
 # --- ZSH --- #
 
