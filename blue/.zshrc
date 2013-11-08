@@ -3,6 +3,8 @@
 autoload -U colors && colors
 autoload -U compinit && compinit
 setopt CORRECT
+setopt PROMPTSUBST
+#setopt PROMPTPERCENT
 
 # ZSH - History
 export HISTFILE=~/.history
@@ -12,8 +14,11 @@ export SAVEHIST=1000
 setopt HIST_FIND_NO_DUPS
 setopt INC_APPEND_HISTORY
 
+# Prompt
+export PROMPT='%{$fg_bold[blue]%} 🙈  %{$reset_color%}'
+export RPROMPT='%{$fg_bold[blue]%} %~ %{$reset_color%}'
+
 # Basics
-export PROMPT="%{$fg_bold[blue]%}%. 🙈  %{$reset_color%}"
 export PATH="~/bin:/usr/local/bin:/usr/local/share/npm/bin:$PATH"
 export EDITOR='vim'
 
