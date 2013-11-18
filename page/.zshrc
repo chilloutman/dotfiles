@@ -12,6 +12,13 @@ alias tmux-shindig='tmux source-file /p/finnova.www/tmux.conf'
 
 # --- ZSH --- #
 
+# History
+export HISTFILE=~/.history
+export HISTSIZE=1000
+export SAVEHIST=1000
+setopt HIST_FIND_NO_DUPS
+setopt INC_APPEND_HISTORY
+
 # Delete key
 bindkey "^[[3~" delete-char
 
