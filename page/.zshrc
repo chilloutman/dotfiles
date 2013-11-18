@@ -8,6 +8,7 @@ export JAVA_HOME=/Library/Java/Home
 alias ll='ls -al'
 alias java6='export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home'
 alias tmux-kill='tmux ls | awk '\''{print $1}'\'' | sed '\''s/://g'\'' | xargs -I{} tmux kill-session -t {}'
+alias tmux-shindig='tmux source-file /p/finnova.www/tmux.conf'
 
 # --- ZSH --- #
 
@@ -16,9 +17,7 @@ bindkey "^[[3~" delete-char
 
 # Prompt
 source ~/.zsh/git-prompt.sh
-PROMPT='
-%{$fg_bold[blue]%}%d%{$reset_color%}$(__git_ps1 " (%s)")
-☕  '
+PROMPT='%{$fg_bold[blue]%}%d%{$reset_color%}$(__git_ps1 " (%s)") ☕  '
 setopt promptsubst
 export GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUPSTREAM="auto"
@@ -54,5 +53,5 @@ ZSH_HIGHLIGHT_STYLES[globbing]='fg=blue,bold'
 
 # /Highlighting
 
-[[ -z "$TMUX" ]] && exec tmux
+#[[ -z "$TMUX" ]] && exec tmux
 
