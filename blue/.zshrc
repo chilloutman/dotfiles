@@ -24,7 +24,7 @@ export EDITOR='vim'
 
 # Aliases
 alias ll='ls -al'
-alias pg='postgres -D /usr/local/var/postgres'
+alias l='ll'
 
 # Java
 export JAVA_HOME="$(/usr/libexec/java_home)"
