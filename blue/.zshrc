@@ -29,7 +29,11 @@ alias l='ll'
 # Java
 export JAVA_HOME="$(/usr/libexec/java_home)"
 
+# Highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/dotfiles/zsh-syntax-highlighting-config
+
 # Set UTF-8 for mosh
-export LC_ALL=en_US.UTF-8  
+export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
