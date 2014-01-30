@@ -4,6 +4,8 @@
 
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
 export JAVA_HOME='/Library/Java/Home'
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 alias ll='ls -al'
 alias java6='export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home'
@@ -28,7 +30,7 @@ bindkey "^[[3~" delete-char
 
 # Prompt
 source ~/.zsh/git-prompt.sh
-PROMPT='%{$fg_bold[blue]%}%d%{$reset_color%} ☕  '
+PROMPT="%{$fg_bold[blue]%}%d%{$reset_color%} ☕  "
 RPROMPT='$(__git_ps1 " (%s)")'
 setopt promptsubst
 export GIT_PS1_SHOWDIRTYSTATE=1
