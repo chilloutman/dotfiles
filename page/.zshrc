@@ -3,14 +3,18 @@
 #fi
 
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
-export JAVA_HOME='/Library/Java/Home'
+export ANT_OPTS='-Xmx2G -XX:MaxPermSize=512m'
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 alias ll='ls -al'
-alias java6='export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home'
+alias l=ll
 alias tmux-kill='tmux ls | awk '\''{print $1}'\'' | sed '\''s/://g'\'' | xargs -I{} tmux kill-session -t {}'
 alias tmux-shindig='tmux source-file /p/finnova.www/tmux.conf'
+
+alias java6="export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)"
+alias java7="export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)"
+java7
 
 # --- ZSH --- #
 
