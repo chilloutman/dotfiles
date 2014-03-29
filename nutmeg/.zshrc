@@ -3,6 +3,7 @@ export PATH=/root/bin:$PATH
 export RPROMPT='%~'
 
 alias ll='ls -al'
+alias l=ll
 
 # ZSH
 autoload -U compinit && compinit
