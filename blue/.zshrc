@@ -10,7 +10,7 @@ setopt PROMPTSUBST
 export HISTFILE=~/.history
 export HISTSIZE=1000
 export SAVEHIST=1000
-#setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_DUPS
 setopt HIST_FIND_NO_DUPS
 setopt INC_APPEND_HISTORY
 
@@ -27,7 +27,8 @@ alias ll='ls -al'
 alias l='ll'
 
 # Java
-export JAVA_HOME="$(/usr/libexec/java_home)"
+alias java7="export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)"
+java7
 
 # Highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
