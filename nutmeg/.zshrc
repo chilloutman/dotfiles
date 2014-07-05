@@ -1,9 +1,11 @@
 
 export PATH=/root/bin:$PATH
 export RPROMPT='%~'
+export EDITOR='vim'
 
 alias ll='ls -al'
 alias l=ll
+alias y=yaourt
 
 # ZSH
 autoload -U compinit && compinit
