@@ -5,6 +5,7 @@ export EDITOR='vim'
 
 alias ll='ls -al'
 alias l=ll
+alias vi=vim
 alias y=yaourt
 
 # ZSH
@@ -19,6 +20,4 @@ if which tmux 2>&1 >/dev/null && test -z "$TMUX"; then
         exec tmux new-session
     fi
 fi
-
-#[[ -z "$TMUX" ]] && exec tmux
 
