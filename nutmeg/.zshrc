@@ -1,3 +1,5 @@
+source ~/dotfiles/utf-8
+
 # ZSH
 bindkey -e
 autoload -U colors && colors
@@ -10,9 +12,7 @@ export RPROMPT='%B%~%b'
 export EDITOR='vim'
 
 # ALIAS
-alias ll='ls -al'
-alias l=ll
-alias vi=vim
+source ~/dotfiles/alias
 alias y=yaourt
 
 # TMUX
@@ -24,4 +24,3 @@ if which tmux 2>&1 >/dev/null && test -z "$TMUX"; then
         exec tmux new-session
     fi
 fi
-

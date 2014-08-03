@@ -1,0 +1,6 @@
+export HISTFILE=~/.history
+export HISTSIZE=1000
+export SAVEHIST=1000
+setopt HIST_IGNORE_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt INC_APPEND_HISTORY
