@@ -24,6 +24,7 @@ export PATH="~/bin:/usr/local/bin:/usr/local/share/npm/bin:$PATH"
 export EDITOR='vim'
 
 # Aliases
+alias ls='ls -G'
 alias ll='ls -al'
 alias l='ll'
 
