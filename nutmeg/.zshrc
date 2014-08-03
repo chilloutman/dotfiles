@@ -1,15 +1,19 @@
+# ZSH
+bindkey -e
+autoload -U colors && colors
+autoload -U compinit && compinit
 
+# ENV
 export PATH=/root/bin:$PATH
-export RPROMPT='%~'
+export  PROMPT="%{$fg_bold[red]%} > %{$reset_color%}"
+export RPROMPT='%B%~%b'
 export EDITOR='vim'
 
+# ALIAS
 alias ll='ls -al'
 alias l=ll
 alias vi=vim
 alias y=yaourt
-
-# ZSH
-autoload -U compinit && compinit
 
 # TMUX
 # If not inside a tmux session, and if no session is started, start a new session.
