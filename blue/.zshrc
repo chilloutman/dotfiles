@@ -5,6 +5,7 @@ autoload -U compinit && compinit
 setopt CORRECT
 setopt PROMPTSUBST
 #setopt PROMPTPERCENT
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 # ZSH - History
 export HISTFILE=~/.history
