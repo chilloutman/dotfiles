@@ -11,7 +11,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 source ~/dotfiles/zsh-history
 
 # Prompt
-export PROMPT='%{$fg_bold[blue]%} 🙈  %{$reset_color%}'
+export PROMPT='%{$fg_bold[blue]%} > %{$reset_color%}'
 export RPROMPT='%{$fg_bold[blue]%} %~ %{$reset_color%}'
 
 # Basics
