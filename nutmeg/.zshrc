@@ -1,12 +1,19 @@
-
-export PATH=/root/bin:$PATH
-export RPROMPT='%~'
-
-alias ll='ls -al'
-alias l=ll
+source ~/dotfiles/utf-8
 
 # ZSH
+bindkey -e
+autoload -U colors && colors
 autoload -U compinit && compinit
+
+# ENV
+export PATH=/root/bin:$PATH
+export  PROMPT="%{$fg_bold[red]%} > %{$reset_color%}"
+export RPROMPT='%B%~%b'
+export EDITOR='vim'
+
+# ALIAS
+source ~/dotfiles/alias
+alias y=yaourt
 
 # TMUX
 # If not inside a tmux session, and if no session is started, start a new session.
@@ -17,6 +24,3 @@ if which tmux 2>&1 >/dev/null && test -z "$TMUX"; then
         exec tmux new-session
     fi
 fi
-
-#[[ -z "$TMUX" ]] && exec tmux
-
