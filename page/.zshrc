@@ -6,9 +6,13 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
 export ANT_OPTS='-Xmx2G -XX:MaxPermSize=512m'
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+export EDITOR=vim
 
-alias ll='ls -al'
-alias l=ll
+alias ls='ls -G'
+alias la='ls -al'
+alias ll='ls -l'
+alias l=la
+alias vi=vim
 alias tmux-kill='tmux ls | awk '\''{print $1}'\'' | sed '\''s/://g'\'' | xargs -I{} tmux kill-session -t {}'
 alias tmux-shindig='tmux source-file /p/finnova.www/tmux.conf'
 
@@ -16,11 +20,17 @@ alias java6="export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)"
 alias java7="export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)"
 java7
 
+alias med='java6; cd ~/git/medusa/medusa-suite;'
+
 # --- ZSH --- #
+
+bindkey -e
 
 autoload -U colors && colors
 autoload -U compinit && compinit
+
 setopt AUTO_PUSHD
+setopt PUSHD_IGNORE_DUPS
 
 # History
 export HISTFILE=~/.history
