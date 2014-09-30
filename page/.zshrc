@@ -4,6 +4,7 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
 export ANT_OPTS='-Xmx2G -XX:MaxPermSize=512m'
 
 source ~/dotfiles/alias
+source ~/dotfiles/osx-alias
 source ~/dotfiles/osx-java
 
 export EDITOR=vim
