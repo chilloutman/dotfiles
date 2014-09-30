@@ -27,7 +27,7 @@ bindkey "^[[3~" delete-char
 
 # Prompt
 source ~/.zsh/git-prompt.sh
-PROMPT='%{$fg_bold[blue]%}%d%{$reset_color%} $([ $? = 0 ] && echo 👍 || echo 👎 )  '
+PROMPT='%{$fg_bold[blue]%}%d%{$reset_color%} $([ $? = 0 ] && echo ">" || echo "😱 ") '
 RPROMPT='$(__git_ps1 " (%s)")'
 setopt promptsubst
 export GIT_PS1_SHOWDIRTYSTATE=1
