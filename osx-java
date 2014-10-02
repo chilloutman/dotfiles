@@ -1,3 +1,4 @@
-alias java6="export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)"
+alias java6="export JAVA_HOME=$(/usr/libexec/java_home -v 1.6 2>/dev/null)"
 alias java7="export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)"
-java7
+alias java8="export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)"
+java8
