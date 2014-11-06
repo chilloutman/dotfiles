@@ -2,17 +2,18 @@ source ~/dotfiles/utf-8
 
 # ZSH
 autoload -U colors && colors
-autoload -U compinit && compinit
 
 setopt CORRECT
 setopt PROMPTSUBST
+
 fpath=(/usr/local/share/zsh-completions $fpath)
+autoload -U compinit && compinit
 
 source ~/dotfiles/zsh-history
 
 # Prompt
-export PROMPT='%{$fg_bold[blue]%} > %{$reset_color%}'
-export RPROMPT='%{$fg_bold[blue]%} %~ %{$reset_color%}'
+export PROMPT=' ➤ '
+export RPROMPT=' %~ '
 
 # Basics
 export PATH="~/bin:/usr/local/bin:/usr/local/share/npm/bin:$PATH"
