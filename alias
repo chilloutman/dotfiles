@@ -1,3 +1,6 @@
 alias ll='ls -al'
 alias l='ll'
-alias vi=vim
+
+alias vi='vim'
+
+alias gs='git status'

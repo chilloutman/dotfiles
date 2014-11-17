@@ -10,6 +10,7 @@ source ~/dotfiles/osx-java
 export EDITOR=vim
 
 alias med='java6; cd ~/git/medusa/medusa-suite;'
+alias kill-tomcat='echo SHUTDOWN | telnet localhost 8005'
 
 # --- ZSH --- #
 
