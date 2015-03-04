@@ -1,7 +1,7 @@
 source ~/dotfiles/utf-8
 
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
-export ANT_OPTS='-Xmx2G -XX:MaxPermSize=512m'
+export ANT_OPTS='-Xms512M -Xmx3G'
 
 source ~/dotfiles/alias
 source ~/dotfiles/osx-alias
@@ -9,7 +9,7 @@ source ~/dotfiles/osx-java
 
 export EDITOR=vim
 
-alias med='java6; cd ~/git/medusa/medusa-suite;'
+alias med='java7; cd ~/git/medusa/medusa-suite;'
 alias kill-tomcat='echo SHUTDOWN | telnet localhost 8005'
 
 # --- ZSH --- #
@@ -21,6 +21,7 @@ autoload -U compinit && compinit
 
 setopt AUTO_PUSHD
 setopt PUSHD_IGNORE_DUPS
+setopt rcquotes
 
 source ~/dotfiles/zsh-history
 
@@ -32,6 +33,7 @@ source ~/.zsh/git-prompt.sh
 PROMPT='%{$fg_bold[blue]%}%d%{$reset_color%} $([ $? = 0 ] && echo ">" || echo "😱 ") '
 RPROMPT='$(__git_ps1 " (%s)")'
 setopt promptsubst
+
 export GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUPSTREAM="auto"
 

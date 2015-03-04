@@ -4,3 +4,4 @@ alias l='ll'
 alias vi='vim'
 
 alias gs='git status'
+alias gitd='git daemon --reuseaddr --verbose --base-path=.git  --export-all'
