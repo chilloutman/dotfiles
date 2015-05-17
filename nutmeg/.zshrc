@@ -6,12 +6,12 @@ autoload -U colors && colors
 autoload -U compinit && compinit
 
 # ENV
-export PATH=/root/bin:$PATH
-export  PROMPT="%{$fg_bold[red]%} > %{$reset_color%}"
+export PROMPT="%{$fg_bold[red]%} > %{$reset_color%}"
 export RPROMPT='%B%~%b'
 export EDITOR='vim'
 
 # ALIAS
+alias ls='ls --color'
 source ~/dotfiles/alias
 alias y=yaourt
 
