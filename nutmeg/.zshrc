@@ -6,14 +6,18 @@ autoload -U colors && colors
 source ~/dotfiles/zsh-comp
 
 # ENV
-export PROMPT="%{$fg_bold[red]%} > %{$reset_color%}"
-export RPROMPT='%B%~%b'
+export PROMPT="%B%~%b
+%{$fg_bold[red]%} > %{$reset_color%}"
+#export RPROMPT='%B%~%b'
 export EDITOR='vim'
+
+export PATH="~/bin:$PATH"
 
 # ALIAS
 alias ls='ls --color'
 source ~/dotfiles/alias
-alias y=yaourt
+alias p=pacaur
+alias sc='sudo systemctl'
 
 # TMUX
 # If not inside a tmux session, and if no session is started, start a new session.
