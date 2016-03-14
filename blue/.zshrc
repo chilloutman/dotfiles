@@ -27,10 +27,13 @@ bindkey "^[[3~" delete-char
 
 # Prompt
 export PROMPT=' ▸ '
-export RPROMPT=' %~ '
+#export RPROMPT=' %~ '
 
 # Highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/dotfiles/zsh-syntax-highlighting-config
+
+# VCS
+source ~/dotfiles/zsh-vcs
 
 archey -c
