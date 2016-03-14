@@ -17,7 +17,6 @@ alias kill-tomcat='echo SHUTDOWN | telnet localhost 8005'
 bindkey -e
 
 autoload -U colors && colors
-autoload -U compinit && compinit
 
 setopt AUTO_PUSHD
 setopt PUSHD_IGNORE_DUPS
@@ -37,7 +36,9 @@ setopt promptsubst
 export GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWUPSTREAM="auto"
 
+# Completions
 fpath=(/usr/local/share/zsh-completions $fpath)
+source ~/gotfiles/zsh-comp
 
 # Highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

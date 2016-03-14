@@ -3,7 +3,7 @@ source ~/dotfiles/utf-8
 # ZSH
 bindkey -e
 autoload -U colors && colors
-autoload -U compinit && compinit
+source ~/dotfiles/zsh-comp
 
 # ENV
 export PROMPT="%{$fg_bold[red]%} > %{$reset_color%}"
