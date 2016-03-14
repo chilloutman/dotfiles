@@ -3,16 +3,24 @@ source ~/dotfiles/utf-8
 # ZSH
 autoload -U colors && colors
 
+setopt rcquotes # Escape ' with ''
 setopt CORRECT
 setopt PROMPTSUBST
 
+# Completions
 fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -U compinit && compinit
+setopt completealiases
+zstyle ':completion:*' menu select 
 
+# History
 source ~/dotfiles/zsh-history
 
+# Delete key
+bindkey "^[[3~" delete-char
+
 # Prompt
-export PROMPT=' ➤ '
+export PROMPT=' ▸ '
 export RPROMPT=' %~ '
 
 # Basics
