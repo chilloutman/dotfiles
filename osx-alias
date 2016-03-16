@@ -1,4 +1,0 @@
-alias ll='ls -lGhL'
-alias l='ll'
-alias la='ls -alGhL'
-

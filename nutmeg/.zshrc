@@ -1,21 +1,14 @@
-source ~/dotfiles/utf-8
+export PATH="~/bin:$PATH"
 
-# ZSH
-bindkey -e
-autoload -U colors && colors
-source ~/dotfiles/zsh-comp
+source ~/dotfiles/base
 
-# ENV
 export PROMPT="%B%~%b
 %{$fg_bold[red]%} > %{$reset_color%}"
 #export RPROMPT='%B%~%b'
-export EDITOR='vim'
 
-export PATH="~/bin:$PATH"
+source ~/dotfiles/zsh-comp
 
-# ALIAS
 alias ls='ls --color'
-source ~/dotfiles/alias
 alias p=pacaur
 alias sc='sudo systemctl'
 

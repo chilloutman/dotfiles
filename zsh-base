@@ -1,0 +1,9 @@
+bindkey -e # ctrl-r, ctrl-e, ...
+
+autoload -U colors && colors
+
+setopt RCQUOTES # Escape ' with ''
+setopt CORRECT
+setopt PROMPTSUBST
+
+bindkey "^[[3~" delete-char # Delete key

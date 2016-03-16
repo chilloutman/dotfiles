@@ -1,0 +1,26 @@
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+alias ll='ls -l'
+alias l='ll'
+alias la='ls -la'
+
+alias gs='git status'
+alias gitd='git daemon --reuseaddr --verbose --base-path=.git  --export-all'
+
+alias vi=vim
+alias g=grep
+
+export EDITOR=vi
+
+if [[ "$OSTYPE" == darwin* ]] ; then
+    export CLICOLOR=CLICOLOR
+    alias ls='ls -hL'
+
+    function vscode () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args "$@"; }
+    
+    # Switch Java version
+    alias java7="export JAVA_HOME=$(/usr/libexec/java_home -v 1.7 2>/dev/null) && export ANT_OPTS=-XX:MaxPermSize=1G && export GRADLE_OPTS=-XX:MaxPermSize=1G"
+    alias java8="export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)"
+    export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+fi

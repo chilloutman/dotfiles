@@ -1,3 +1,8 @@
+
+HOMEBREW_HIGHLIGHTING='/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh'
+[ -r "$HOMEBREW_HIGHLIGHTING" ] && source "$HOMEBREW_HIGHLIGHTING"  
+
+
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main pattern)
 ZSH_HIGHLIGHT_STYLES[cursor]='none'
 ZSH_HIGHLIGHT_STYLES[alias]='none'

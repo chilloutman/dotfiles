@@ -1,9 +1,0 @@
-alias ll='ls -l'
-alias l='ll'
-alias la='ls -la'
-
-alias gs='git status'
-alias gitd='git daemon --reuseaddr --verbose --base-path=.git  --export-all'
-
-alias vi=vim
-alias g=grep
