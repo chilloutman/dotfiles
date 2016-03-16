@@ -1,18 +1,23 @@
 source ~/dotfiles/utf-8
 
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
-export ANT_OPTS='-Xms512M -Xmx3G'
 
 source ~/dotfiles/alias
 source ~/dotfiles/osx-alias
 source ~/dotfiles/osx-java
 
 export EDITOR=vim
+function vscode () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args "$@"; }
 
-alias med='java7; cd ~/git/medusa/medusa-suite;'
+# Work
+
+alias med='java7; cd ~/git/medusa/master'
 alias kill-tomcat='echo SHUTDOWN | telnet localhost 8005'
+alias gw='~/git/medusa/master/gradlew'
+export GRADLE_OPTS=-XX:MaxPermSize=1G
+export ANT_OPTS=-XX:MaxPermSize=1G
 
-# --- ZSH --- #
+# ZSH
 
 bindkey -e
 
@@ -24,12 +29,14 @@ setopt rcquotes
 
 source ~/dotfiles/zsh-history
 
+#precmd () { echo -e "\033];${PWD}\007" }
+
 # Delete key
 bindkey "^[[3~" delete-char
 
 # Prompt
 source ~/.zsh/git-prompt.sh
-PROMPT='%{$fg_bold[blue]%}%d%{$reset_color%} $([ $? = 0 ] && echo ">" || echo "😱 ") '
+PROMPT='%{$fg_bold[blue]%}%d%{$reset_color%}$([ $? = 0 ] && echo "🔹 " || echo "⁉️ ") '
 RPROMPT='$(__git_ps1 " (%s)")'
 setopt promptsubst
 
