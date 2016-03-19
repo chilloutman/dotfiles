@@ -1,11 +1,13 @@
 autoload -Uz vcs_info
+
 zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git*' formats '%S (%b%u%c)'
+zstyle ':vcs_info:git*' actionformats '(%b%u%c %a)'
+zstyle ':vcs_info:git*' check-for-changes true
+zstyle ':vcs_info:git*' stagedstr '+'
+zstyle ':vcs_info:git*' unstagedstr '*'
 
 precmd() {
     vcs_info
-    if [[ -n "$vcs_info_msg_0_" ]]; then
-        RPROMPT="%3~ $vcs_info_msg_0_"
-    else
-        RPROMPT="%~"
-    fi
+    RPROMPT="%B$vcs_info_msg_0_%b"
 }
