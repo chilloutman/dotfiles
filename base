@@ -1,6 +1,7 @@
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+alias ls='ls -h'
 alias ll='ls -l'
 alias l='ll'
 alias la='ls -la'
@@ -15,7 +16,6 @@ export EDITOR=vi
 
 if [[ "$OSTYPE" == darwin* ]] ; then
     export CLICOLOR=CLICOLOR
-    alias ls='ls -hL'
 
     function vscode () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args "$@"; }
     
