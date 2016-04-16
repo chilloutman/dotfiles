@@ -1,7 +1,15 @@
-autoload -U compinit && compinit
+
+if [ -d '/usr/local/share/zsh-completions' ] ; then
+    fpath=(/usr/local/share/zsh-completions $fpath)
+fi
+
+if [ -d '/usr/local/share/zsh/site-functions' ] ; then
+    fpath=(/usr/local/share/zsh/site-functions $fpath)
+fi
+
 setopt completealiases
 zstyle ':completion:*' menu select
 
-if [ -r '/usr/local/share/zsh-completions' ] ; then
-    fpath=('/usr/local/share/zsh-completions' $fpath)
-fi
+autoload -U compinit && compinit
+#autoload -U bashcompinit && bashcompinit
+
