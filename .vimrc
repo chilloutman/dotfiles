@@ -26,9 +26,6 @@ set encoding=utf8
 cmap w!! w !sudo tee > /dev/null %
 
 syntax enable
-set background=light
-let g:solarized_termcolors=256
-colorscheme solarized
-
+colorscheme github
 set hlsearch
 
