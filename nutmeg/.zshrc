@@ -6,6 +6,7 @@ export PROMPT=$'%B%~\n %F{red}> %f%b'
 
 source ~/dotfiles/zsh-comp
 source ~/dotfiles/zsh-base
+source ~/dotfiles/zsh-history
 
 alias ls='ls -h --color'
 alias p=pacaur

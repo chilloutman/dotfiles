@@ -2,7 +2,7 @@ autoload -U colors && colors
 
 setopt rcquotes # Escape ' with ''
 setopt correct 
-setopt correctall
+#setopt correctall
 
 bindkey -e # ctrl-r, ctrl-e, ...
 bindkey "^[[3~" delete-char # Delete key
