@@ -19,7 +19,7 @@ export EDITOR=vi
 if [[ "$OSTYPE" == darwin* ]] ; then
     export CLICOLOR=CLICOLOR
 
-    function vscode () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args "$@"; }
+    function vs () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args "$@"; }
     
     # Switch Java version
     export JAVA7_HOME="$(/usr/libexec/java_home -v 1.7 2>/dev/null)"
