@@ -9,6 +9,7 @@ set history=50 " keep 50 lines of command line history
 set ruler " show the cursor position all the time
 set showcmd " display incomplete commands
 set incsearch " do incremental searching
+set hlsearch
 set cursorline
 set number 
 set wildmenu  
@@ -16,9 +17,9 @@ set showmatch
 set so=5 " j/k padding
 set autoread " Read external changes
 
-set expandtab
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
 
 set encoding=utf8
 
@@ -26,6 +27,5 @@ set encoding=utf8
 cmap w!! w !sudo tee > /dev/null %
 
 syntax enable
-colorscheme github
-set hlsearch
+colorscheme desert 
 
