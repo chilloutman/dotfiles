@@ -1,5 +1,7 @@
 autoload -U colors && colors
 
+unsetopt beep
+
 setopt rcquotes # Escape ' with ''
 
 #setopt correct
