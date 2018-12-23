@@ -1,3 +1,5 @@
+archey3
+
 export PATH="~/bin:$PATH"
 
 source ~/dotfiles/base
@@ -9,8 +11,9 @@ source ~/dotfiles/zsh-base
 source ~/dotfiles/zsh-history
 
 alias ls='ls -h --color'
-alias p=pacaur
+alias p='sudo pacman'
 alias sc='sudo systemctl'
+alias j='sudo journalctl'
 
 export ABDUCO_CMD='/bin/zsh'
 
