@@ -17,10 +17,7 @@ set showmatch
 set so=5 " j/k padding
 set autoread " Read external changes
 
-"set shiftwidth=4
-"set tabstop=4
-"set softtabstop=4
-set noexpandtab
+set tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
 
 set encoding=utf8
 
