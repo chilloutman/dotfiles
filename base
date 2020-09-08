@@ -13,15 +13,11 @@ alias gw='./gradlew'
 
 alias vi=vim
 alias g=grep
+alias vs=code
+alias coffee='caffeinate -s -w $$'
 
 export EDITOR=vi
 
 if [[ "$OSTYPE" == darwin* ]] ; then
     export CLICOLOR=CLICOLOR
-
-    function vs () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args "$@"; }
-    
-    # Switch Java version
-    export JAVA7_HOME="$(/usr/libexec/java_home -v 1.7 2>/dev/null)"
-    export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
 fi

@@ -1,6 +1,4 @@
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
-export HOMEBREW_CACHE=/Volumes/Ext/Caches/Homebrew
-export ANDROID_HOME=/Volumes/Ext/Android
+export PATH="/usr/local/share/git-core/contrib/diff-highlight:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$PATH"
 
 source ~/dotfiles/base
 
@@ -14,7 +12,9 @@ source ~/dotfiles/zsh-history
 source ~/dotfiles/zsh-syntax-highlighting
 
 export NVM_DIR="$HOME/.nvm"
-source /usr/local/opt/nvm/nvm.sh
+alias nvm-init='source /usr/local/opt/nvm/nvm.sh && nvm use'
 
 alias waketime='sysctl -a | grep waketime'
+
+export JAVA_HOME="$(/usr/libexec/java_home -v 11)"
 
